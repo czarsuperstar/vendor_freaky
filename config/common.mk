@@ -225,7 +225,7 @@ endif
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := false
 ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
-ifeq ($(TARGET_GAPPS_ARCH), arm64)
+ifeq (,$(filter $(TARGET_ARCH), arm64))
 ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
 PRODUCT_PACKAGES += \
     FaceUnlockService
