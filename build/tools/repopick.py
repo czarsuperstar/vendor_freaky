@@ -154,11 +154,11 @@ def fetch_query(remote_url, query):
         raise Exception('Gerrit URL should be in the form http[s]://hostname/ or ssh://[user@]host[:port]')
 
 if __name__ == '__main__':
-    # Default to PixelExperience Gerrit
-    default_gerrit = 'https://gerrit.pixelexperience.org'
+    # Default to FreakyOS Gerrit
+    default_gerrit = 'https://freakyos.me'
 
     # Github url
-    default_github = 'https://github.com/PixelExperience'
+    default_github = 'https://github.com/FreakyOS'
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent('''\
         repopick.py is a utility to simplify the process of cherry picking

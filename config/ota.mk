@@ -1,9 +1,9 @@
 ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
 
 PRODUCT_PACKAGES += \
-    Updates
+    Updater
 
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/org.pixelexperience.ota.xml:system/etc/permissions/org.pixelexperience.ota.xml
+    vendor/freaky/config/permissions/org.freaky.updater.xml:system/etc/permissions/org.freaky.updater.xml
 
 endif

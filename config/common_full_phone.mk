@@ -9,12 +9,15 @@ PRODUCT_PACKAGES += \
 # Telephony packages
 PRODUCT_PACKAGES += \
     Stk \
-    CellBroadcastReceiver
+    CellBroadcastReceiver \
+    Dialer \
+    Contacts \
+    messaging
 
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     net.tethering.noprovisioning=true
 
-# Inherit full common PixelExperience stuff
-$(call inherit-product, vendor/aosp/config/common_full.mk)
+# Inherit full common FreakyOS stuff
+$(call inherit-product, vendor/freaky/config/common_full.mk)

@@ -1,2 +1,2 @@
-# Inherit full common PixelExperience stuff
-$(call inherit-product, vendor/aosp/config/common_full.mk)
+# Inherit full common FreakyOS stuff
+$(call inherit-product, vendor/freaky/config/common_full.mk)

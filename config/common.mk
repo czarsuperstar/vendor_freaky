@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= PixelExperience
+PRODUCT_BRAND ?= FreakyOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -30,11 +30,25 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+# Config Center
+#PRODUCT_PACKAGES += \
+#    ConfigCenter
+
+# WallBucket
+PRODUCT_PACKAGES += \
+    WallBucket
+
+# AOSP apps
+PRODUCT_PACKAGES += \
+    ExactCalculator \
+    DeskClock \
+    LatinIME
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/aosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh
+    vendor/freaky/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/freaky/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/freaky/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh
 
 # OTA
 ifneq ($(TARGET_BUILD_VARIANT),user)
@@ -44,26 +58,31 @@ endif
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/aosp/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/aosp/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/freaky/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/freaky/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/freaky/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
 # Some permissions
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/freaky/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
+    vendor/freaky/config/permissions/privapp-permissions-fm.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-fm.xml \
+    vendor/freaky/config/permissions/privapp-permissions-snap.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-snap.xml \
+    vendor/freaky/config/permissions/privapp-permissions-camera2.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera2.xml \
+    vendor/freaky/config/permissions/privapp-permissions-freaky-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-freaky-product.xml \
+    vendor/freaky/config/permissions/privapp-permissions-google_prebuilt.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google_prebuilt.xml
 
 # Copy all custom init rc files
-$(foreach f,$(wildcard vendor/aosp/prebuilt/common/etc/init/*.rc),\
+$(foreach f,$(wildcard vendor/freaky/prebuilt/common/etc/init/*.rc),\
     $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+    vendor/freaky/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+    vendor/freaky/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -79,7 +98,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/custom-power-whitelist.xml:system/etc/sysconfig/custom-power-whitelist.xml
+    vendor/freaky/config/permissions/custom-power-whitelist.xml:system/etc/sysconfig/custom-power-whitelist.xml
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -110,8 +129,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/aosp/overlay
-DEVICE_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/freaky/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/freaky/overlay/common
 
 # PixelSetupWizard overlay
 PRODUCT_PACKAGES += \
@@ -133,11 +152,12 @@ PRODUCT_PACKAGES += \
 
 # Screen recorder
 PRODUCT_PACKAGES += \
-    Recorder
+    Recorder \
+    Terminal
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := false
-ifeq ($(TARGET_GAPPS_ARCH),arm64)
+ifeq ($(TARGET_ARCH),arm64)
 ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
 PRODUCT_PACKAGES += \
     FaceUnlockService
@@ -148,16 +168,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
 # Branding
-include vendor/aosp/config/branding.mk
+include vendor/freaky/config/branding.mk
 
 # OTA
-include vendor/aosp/config/ota.mk
+include vendor/freaky/config/ota.mk
 
-# GApps
-include vendor/gapps/config.mk
-
-# Pixel Style
-include vendor/pixelstyle/config.mk
+# FreakyOS Style
+include vendor/freaky/freakystyle/config.mk
 
 # Customization
 include vendor/google-customization/config.mk
