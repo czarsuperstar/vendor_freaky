@@ -41,8 +41,12 @@ font_src_files := \
     GoogleSans-Regular.ttf \
     SlateForOnePlus-Book.ttf \
     SlateForOnePlus-Medium.ttf \
-    SlateForOnePlus-Regular.ttf
-
+    SlateForOnePlus-Regular.ttf \
+    CircularStd.ttf \
+    Cagliostro-Regular.ttf \
+    Linotte.ttf \
+    LGSmartGothic.ttf \
+    GearTinkerbell.ttf
 
 $(foreach f, $(font_src_files), $(call build-one-font-module, $(f)))
 

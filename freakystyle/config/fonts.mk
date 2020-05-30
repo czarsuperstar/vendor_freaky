@@ -64,5 +64,13 @@ PRODUCT_PACKAGES += \
       SlateForOnePlus-Medium.ttf \
       SlateForOnePlus-Regular.ttf
 
+#CircularStd
+PRODUCT_PACKAGES += \
+     CircularStd.ttf \
+     Cagliostro-Regular.ttf \
+     Linotte.ttf \
+     LGSmartGothic.ttf \
+     GearTinkerbell.ttf
+
 PRODUCT_COPY_FILES += \
     vendor/freaky/freakystyle/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml

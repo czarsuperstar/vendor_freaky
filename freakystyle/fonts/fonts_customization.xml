@@ -57,4 +57,51 @@
     <alias name="goudy" to="Slate" />
     <alias name="fantasy" to="Slate" />
     <alias name="ITC Stone Serif" to="Slate" />
+<family customizationType="new-named-family" name="circularstd">
+      <font weight="400" style="normal">CircularStd.ttf</font>
+    </family>
+    <alias name="circularstd-semi-bold" to="circularstd" weight="600" />
+    <alias name="circularstd-bold" to="circularstd" weight="700" />
+    <alias name="times" to="circularstd" />
+    <alias name="times new roman" to="circularstd" />
+    <alias name="palatino" to="circularstd" />
+    <alias name="georgia" to="circularstd" />
+    <alias name="baskerville" to="circularstd" />
+    <alias name="goudy" to="circularstd" />
+    <alias name="fantasy" to="circularstd" />
+    <alias name="ITC Stone Serif" to="circularstd" />
+
+ <family customizationType="new-named-family" name="tinkerbell">
+        <font weight="300" style="normal">GearTinkerbell.ttf</font>
+    </family>
+<family customizationType="new-named-family" name="lgsmartgothic">
+      <font weight="300" style="normal">LGSmartGothic.ttf</font>
+    </family>
+    <alias name="lgsmartgothic-bold" to="lgsmartgothic" weight="600" />
+    <alias name="times" to="lgsmartgothic" />
+    <alias name="times new roman" to="lgsmartgothic" />
+    <alias name="palatino" to="lgsmartgothic" />
+    <alias name="georgia" to="lgsmartgothic" />
+    <alias name="baskerville" to="lgsmartgothic" />
+    <alias name="goudy" to="lgsmartgothic" />
+    <alias name="fantasy" to="lgsmartgothic" />
+    <alias name="ITC Stone Serif" to="lgsmartgothic" />
+
+<family customizationType="new-named-family" name="cagliostro">
+      <font weight="300" style="normal">Cagliostro-Regular.ttf</font>
+    </family>
+    <alias name="cagliostro-bold" to="cagliostro" weight="600" />
+    <alias name="times" to="cagliostro" />
+    <alias name="times new roman" to="cagliostro" />
+    <alias name="palatino" to="cagliostro" />
+    <alias name="georgia" to="cagliostro" />
+    <alias name="baskerville" to="cagliostro" />
+    <alias name="goudy" to="cagliostro" />
+    <alias name="fantasy" to="cagliostro" />
+    <alias name="ITC Stone Serif" to="cagliostro" />
+
+<family customizationType="new-named-family" name="linotte">
+        <font weight="300" style="normal">Linotte.ttf</font>
+    </family>
+
 </fonts-modification>
