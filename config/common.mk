@@ -136,6 +136,10 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/freaky/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/freaky/overlay/common
 
+# TouchGestures
+PRODUCT_PACKAGES += \
+    TouchGestures
+
 # PixelSetupWizard overlay
 PRODUCT_PACKAGES += \
     PixelSetupWizardOverlay \
