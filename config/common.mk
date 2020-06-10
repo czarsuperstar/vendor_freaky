@@ -155,6 +155,10 @@ PRODUCT_PACKAGES += \
     Recorder \
     Terminal
 
+# Long Screenshot
+PRODUCT_PACKAGES += \
+    StitchImage
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := false
 ifeq ($(TARGET_ARCH),arm64)
