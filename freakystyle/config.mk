@@ -13,6 +13,7 @@
 # limitations under the License.
 
 LOCAL_PATH := vendor/freaky/freakystyle
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/freaky/freakystyle/overlay
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
