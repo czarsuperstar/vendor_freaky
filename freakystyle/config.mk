@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     GalleryGoPrebuilt \
     Via \
     SoundPickerPrebuilt \
+    TurboPrebuilt \
     WallpaperPickerGoogleRelease \
     WellbeingPrebuilt
     
