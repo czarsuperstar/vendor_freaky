@@ -30,9 +30,9 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# Config Center
-#PRODUCT_PACKAGES += \
-#    ConfigCenter
+# OmniStyle [Header Image]
+PRODUCT_PACKAGES += \
+    OmniStyle
 
 # WallBucket
 PRODUCT_PACKAGES += \
