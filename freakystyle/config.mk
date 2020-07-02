@@ -139,3 +139,6 @@ $(call inherit-product, vendor/freaky/freakystyle/config/audio.mk)
 
 # Inherit from fonts config
 $(call inherit-product, vendor/freaky/freakystyle/config/fonts.mk)
+
+# Switch Styles
+include $(LOCAL_PATH)/switch/switch.mk
