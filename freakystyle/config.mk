@@ -26,10 +26,15 @@ PRODUCT_PACKAGES += \
     GalleryGoPrebuilt \
     Via \
     SoundPickerPrebuilt \
-    TurboPrebuilt \
     WallpaperPickerGoogleRelease \
-    WellbeingPrebuilt
-    
+    WellbeingPrebuilt \
+    MarkupGoogle
+
+ifeq ($(TARGET_ARCH), $(filter $(TARGET_ARCH),arm arm64))
+PRODUCT_PACKAGES += \
+    TurboPrebuilt \
+    LatinIMEGooglePrebuilt
+endif
 
 ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_PACKAGES += \
