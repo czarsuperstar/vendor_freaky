@@ -147,7 +147,6 @@ PRODUCT_PACKAGES += \
 
 # Screen recorder
 PRODUCT_PACKAGES += \
-    Recorder \
     Terminal
 
 # Long Screenshot
