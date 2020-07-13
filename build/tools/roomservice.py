@@ -43,7 +43,7 @@ except ImportError:
 DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/freaky.xml"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'ten')
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'still_alive')
 custom_dependencies = "freaky.dependencies"
 org_manifest = "freaky-devices"  # leave empty if org is provided in manifest
 org_display = "FreakyOS-Devices"  # needed for displaying
