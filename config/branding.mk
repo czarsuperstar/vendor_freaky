@@ -1,8 +1,7 @@
 # Releasekey
-SIGNING_KEYS := vendor/freaky/config/.releasekey
-
-ifneq ($(SIGNING_KEYS),)
 ifneq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
+SIGNING_KEYS := vendor/freaky/config/.releasekey
+ifneq ($(SIGNING_KEYS),)
     PRODUCT_DEFAULT_DEV_CERTIFICATE := $(SIGNING_KEYS)/releasekey
 endif
 endif
