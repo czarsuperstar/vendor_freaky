@@ -1,11 +1,3 @@
-# Releasekey
-ifneq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
-SIGNING_KEYS := vendor/freaky/config/.releasekey
-ifneq ($(SIGNING_KEYS),)
-    PRODUCT_DEFAULT_DEV_CERTIFICATE := $(SIGNING_KEYS)/releasekey
-endif
-endif
-
 # Set all versions
 CUSTOM_BUILD_TYPE ?= UNOFFICIAL
 
@@ -35,3 +27,11 @@ CUSTOM_PROPERTIES := \
     org.freaky.build_type=$(CUSTOM_BUILD_TYPE) \
     org.freaky.build_version=$(FREAKY_VER) \
     org.build.osname=$(BUILD_OS_NAME)
+
+# Releasekey
+ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
+SIGNING_KEYS := vendor/freaky/config/.releasekey
+ifneq ($(SIGNING_KEYS),)
+PRODUCT_DEFAULT_DEV_CERTIFICATE := $(SIGNING_KEYS)/releasekey
+endif
+endif
