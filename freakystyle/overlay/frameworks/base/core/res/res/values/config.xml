@@ -38,6 +38,7 @@
      mode -->
     <string-array name="config_priorityOnlyDndExemptPackages">
         <item>com.google.android.dialer</item>
+        <item>com.android.dialer</item>
     </string-array>
 
     <!-- Additional non-platform defined secure settings exposed to Instant Apps -->
@@ -148,38 +149,6 @@
          routine based battery saver will be hidden -->
     <string name="config_batterySaverScheduleProvider">com.google.android.apps.turbo</string>
 
-    <!-- The package name for the system's app prediction service.
-         This service must be trusted, as it can be activated without explicit consent of the user.
-         Example: "com.android.intelligence/.AppPredictionService"
-    -->
-    <string name="config_defaultAppPredictionService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
-
-    <!-- The package name for the system's augmented autofill service.
-         This service must be trusted, as it can be activated without explicit consent of the user.
-         If no service with the specified name exists on the device, augmented autofill wil be
-         disabled.
-         Example: "com.android.augmentedautofill/.AugmentedAutofillService"
-    -->
-    <string name="config_defaultAugmentedAutofillService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService</string>
-
-    <!-- The package name for the system's content suggestions service.
-         Provides suggestions for text and image selection regions in snapshots of apps and should
-         be able to classify the type of entities in those selections.
-         This service must be trusted, as it can be activated without explicit consent of the user.
-         If no service with the specified name exists on the device, content suggestions wil be
-         disabled.
-         Example: "com.android.contentsuggestions/.ContentSuggestionsService"
-    -->
-    <string name="config_defaultContentSuggestionsService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
-
-    <!-- The package name for the system's content capture service.
-         This service must be trusted, as it can be activated without explicit consent of the user.
-         If no service with the specified name exists on the device, content capture will be
-         disabled.
-         Example: "com.android.contentcapture/.ContentcaptureService"
-    -->
-    <string name="config_defaultContentCaptureService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService</string>
-
     <!-- Colon separated list of package names that should be granted DND access -->
     <string name="config_defaultDndAccessPackages">com.google.android.GoogleCamera:com.google.android.gms:com.google.intelligence.sense:com.google.android.settings.intelligence:com.google.android.apps.wellbeing:com.google.android.apps.safetyhub</string>
 
@@ -193,27 +162,6 @@
     even after user setup is complete. The defined component should be used for supervision purposes
     only. The component must be part of a system app. -->
     <string name="config_defaultSupervisionProfileOwnerComponent">com.google.android.gms/.kids.account.receiver.ProfileOwnerReceiver</string>
-
-    <!-- The component name for the system-wide captions manager service.
-         This service must be trusted, as the system binds to it and keeps it running.
-         Example: "com.android.captions/.SystemCaptionsManagerService"
-    -->
-    <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
-
-    <!-- The component name for the system-wide captions service.
-         This service must be trusted, as it controls part of the UI of the volume bar.
-         Example: "com.android.captions/.SystemCaptionsService"
-    -->
-    <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
-
-    <!-- The package name for the default system textclassifier service.
-         This service must be trusted, as it can be activated without explicit consent of the user.
-         Example: "com.android.textclassifier"
-         If no textclassifier service with the specified name exists on the device (or if this is
-         set to empty string), a default textclassifier will be loaded in the calling app's process.
-         See android.view.textclassifier.TextClassificationManager.
-    -->
-    <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
 
     <!-- The package name for the default wellbeing app.
          This package must be trusted, as it has the permissions to control other applications
@@ -242,17 +190,11 @@
          {@see android.view.Display#FLAG_SHOULD_SHOW_SYSTEM_DECORATIONS} -->
     <string name="config_secondaryHomeComponent">com.google.android.apps.nexuslauncher/com.android.launcher3.SecondaryDisplayLauncher</string>
 
-    <!-- The component name for the default system attention service.
-         This service must be trusted, as it can be activated without explicit consent of the user.
-         See android.attention.AttentionManagerService.
-    -->
-    <string name="config_defaultAttentionService">com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionService</string>
-
     <!-- The name of the package that will hold the dialer role by default. -->
-    <string name="config_defaultDialer">com.google.android.dialer</string>
+    <string name="config_defaultDialer">com.android.dialer</string>
 
-    <string name="config_defaultGallery">com.google.android.apps.photos</string>
-    <string name="config_defaultMusic">com.google.android.music</string>
+    <string name="config_defaultGallery">com.google.android.apps.photosgo</string>
+    <string name="config_defaultMusic">code.name.monkey.retromusic</string>
 
     <!-- Package name for the device provisioning package. -->
     <string name="config_deviceProvisioningPackage">com.google.android.apps.work.oobconfig</string>
