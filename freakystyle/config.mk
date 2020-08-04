@@ -28,12 +28,14 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     WallpaperPickerGoogleRelease \
     WellbeingPrebuilt \
-    MarkupGoogle
+    MarkupGoogle \
+    GoogleTTS
 
 ifeq ($(TARGET_ARCH), $(filter $(TARGET_ARCH),arm arm64))
 PRODUCT_PACKAGES += \
     TurboPrebuilt \
-    LatinIMEGooglePrebuilt
+    LatinIMEGooglePrebuilt \
+    GoogleTTS
 endif
 
 ifeq ($(TARGET_ARCH),arm64)
