@@ -38,12 +38,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     WallBucket
 
-# AOSP apps
-PRODUCT_PACKAGES += \
-    ExactCalculator \
-    DeskClock \
-    LatinIME
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/freaky/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
