@@ -16,7 +16,6 @@ LOCAL_PATH := vendor/freaky/freakystyle
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-    MatchmakerPrebuiltPixel4 \
     NexusLauncherRelease \
     NexusWallpapersStubPrebuilt2019Static \
     PixelThemesStub2019 \
@@ -53,11 +52,6 @@ PRODUCT_PACKAGES += \
     PrebuiltBugle \
     GoogleDialer \
     WebViewGoogle
-endif
-
-ifeq ($(TARGET_ARCH),arm64)
-PRODUCT_PACKAGES += \
-    MatchmakerPrebuiltPixel4
 endif
 
 PRODUCT_COPY_FILES += \
