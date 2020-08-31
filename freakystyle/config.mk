@@ -35,7 +35,8 @@ PRODUCT_PACKAGES += \
     GalleryGoPrebuilt \
     GoogleServicesFramework \
     GoogleContacts \
-    GoogleContactsSyncAdapter
+    GoogleContactsSyncAdapter \
+    WallBucket
 
 ifeq ($(IS_PHONE),true)
 PRODUCT_PACKAGES += \
