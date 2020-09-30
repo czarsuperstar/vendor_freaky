@@ -18,7 +18,6 @@ LOCAL_PATH := vendor/freaky/freakystyle
 PRODUCT_PACKAGES += \
     NexusLauncherRelease \
     NexusWallpapersStubPrebuilt2019Static \
-    PixelThemesStub2019 \
     SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     RetroMusicPlayer \
@@ -36,7 +35,8 @@ PRODUCT_PACKAGES += \
     GoogleServicesFramework \
     GoogleContacts \
     GoogleContactsSyncAdapter \
-    WallBucket
+    WallBucket \
+    FreakyStyles
 
 ifeq ($(IS_PHONE),true)
 PRODUCT_PACKAGES += \
